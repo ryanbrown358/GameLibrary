@@ -1,6 +1,6 @@
 namespace GameLibrary.API.Data
 {
-    public class GameRepository
+    public interface IAuthRepository
     {
         
     }
