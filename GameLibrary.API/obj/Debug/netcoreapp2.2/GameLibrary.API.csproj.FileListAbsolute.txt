@@ -1,0 +1,14 @@
+/Volumes/Samsung_T5/GameLibrary/GameLibrary.API/bin/Debug/netcoreapp2.2/GameLibrary.API.deps.json
+/Volumes/Samsung_T5/GameLibrary/GameLibrary.API/bin/Debug/netcoreapp2.2/GameLibrary.API.runtimeconfig.json
+/Volumes/Samsung_T5/GameLibrary/GameLibrary.API/bin/Debug/netcoreapp2.2/GameLibrary.API.runtimeconfig.dev.json
+/Volumes/Samsung_T5/GameLibrary/GameLibrary.API/bin/Debug/netcoreapp2.2/GameLibrary.API.dll
+/Volumes/Samsung_T5/GameLibrary/GameLibrary.API/bin/Debug/netcoreapp2.2/GameLibrary.API.pdb
+/Volumes/Samsung_T5/GameLibrary/GameLibrary.API/obj/Debug/netcoreapp2.2/GameLibrary.API.csprojAssemblyReference.cache
+/Volumes/Samsung_T5/GameLibrary/GameLibrary.API/obj/Debug/netcoreapp2.2/GameLibrary.API.csproj.CoreCompileInputs.cache
+/Volumes/Samsung_T5/GameLibrary/GameLibrary.API/obj/Debug/netcoreapp2.2/GameLibrary.API.RazorAssemblyInfo.cache
+/Volumes/Samsung_T5/GameLibrary/GameLibrary.API/obj/Debug/netcoreapp2.2/GameLibrary.API.RazorAssemblyInfo.cs
+/Volumes/Samsung_T5/GameLibrary/GameLibrary.API/obj/Debug/netcoreapp2.2/GameLibrary.API.AssemblyInfoInputs.cache
+/Volumes/Samsung_T5/GameLibrary/GameLibrary.API/obj/Debug/netcoreapp2.2/GameLibrary.API.AssemblyInfo.cs
+/Volumes/Samsung_T5/GameLibrary/GameLibrary.API/obj/Debug/netcoreapp2.2/GameLibrary.API.RazorTargetAssemblyInfo.cache
+/Volumes/Samsung_T5/GameLibrary/GameLibrary.API/obj/Debug/netcoreapp2.2/GameLibrary.API.dll
+/Volumes/Samsung_T5/GameLibrary/GameLibrary.API/obj/Debug/netcoreapp2.2/GameLibrary.API.pdb
