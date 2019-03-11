@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using GameLibrary.API.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace GameLibrary.API.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class GamesController : ControllerBase
@@ -17,7 +19,8 @@ namespace GameLibrary.API.Controllers
         {
             _context = context;
         }
-
+        
+        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> GetGames()
         {

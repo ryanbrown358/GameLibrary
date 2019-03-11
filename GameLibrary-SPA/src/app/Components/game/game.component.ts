@@ -24,5 +24,4 @@ export class GameComponent implements OnInit {
       console.log(err);
     });
   }
-
 }
