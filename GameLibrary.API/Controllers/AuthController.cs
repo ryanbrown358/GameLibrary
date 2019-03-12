@@ -1,15 +1,16 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
-using GameLibrary.API.Data;
-using GameLibrary.API.Dtos;
-using GameLibrary.API.Models;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
-
+using GameLibrary.API.Data;
+using GameLibrary.API.Models;
+using GameLibrary.API.Dtos;
 namespace GameLibrary.API.Controllers
 {
     [Route("api/[controller]")]
@@ -45,26 +46,19 @@ namespace GameLibrary.API.Controllers
         }
 
         [HttpPost("login")]
-        public async Task<IActionResult> Login(UserForRegisterDto userForRegisterDto)
+        public async Task<IActionResult> Login(UserForLoginDto userForLoginDto)
         {
-            var userFromRepo = await _repo.Login(userForRegisterDto.Username.ToLower(), userForRegisterDto.Password);
+            var userFromRepo = await _repo.Login(userForLoginDto.Username, userForLoginDto.Password);
 
             if (userFromRepo == null)
-            {
                 return Unauthorized();
-            }
-
-            // build token to return to the user 
-            // contain the user id and user's username
-
-            var claims = new []
+            var claims = new[]
             {
                 new Claim(ClaimTypes.NameIdentifier, userFromRepo.Id.ToString()),
                 new Claim(ClaimTypes.Name, userFromRepo.Username), 
             };
-
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config
-                .GetSection("AppSettings:Token").Value));
+            
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config.GetSection("AppSettings:Token").Value));
             
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
 
@@ -74,15 +68,16 @@ namespace GameLibrary.API.Controllers
                 Expires = DateTime.Now.AddDays(1),
                 SigningCredentials = creds
             };
-
+            
             var tokenHandler = new JwtSecurityTokenHandler();
 
             var token = tokenHandler.CreateToken(tokenDescriptor);
-
+            
             return Ok(new
             {
                 token = tokenHandler.WriteToken(token)
             });
         }
+    
     }
 }

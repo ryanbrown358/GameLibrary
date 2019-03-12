@@ -20,7 +20,7 @@ namespace GameLibrary.API.Controllers
             _context = context;
         }
         
-        [AllowAnonymous]
+        
         [HttpGet]
         public async Task<IActionResult> GetGames()
         {
@@ -28,6 +28,7 @@ namespace GameLibrary.API.Controllers
             return Ok(games);
         }
 
+        [AllowAnonymous]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetGame(int id)
         {
