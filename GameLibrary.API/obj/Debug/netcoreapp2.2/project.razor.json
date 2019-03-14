@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "/Volumes/Samsung_T5/GameLibrary/GameLibrary.API/GameLibrary.API.csproj",
+  "TargetFramework": "netcoreapp2.2",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "MVC-2.1",
+    "LanguageVersion": "2.1",
+    "Extensions": [
+      {
+        "ExtensionName": "MVC-2.1"
+      }
+    ]
+  }
+}

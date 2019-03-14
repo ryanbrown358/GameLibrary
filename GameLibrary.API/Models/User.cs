@@ -1,7 +1,5 @@
-namespace GameLibrary.API.Models
-{
-    public class User
-    {
+namespace GameLibrary.API.Models {
+    public class User {
         public int Id { get; set; }
         public string Username { get; set; }
         public byte[] PasswordHash { get; set; }

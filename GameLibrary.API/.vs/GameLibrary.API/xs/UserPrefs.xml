@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{76E756C6-0DC2-4C67-8FAC-AD5F7A1DBA45}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/GamesController.cs">
+    <Files>
+      <File FileName="Controllers/GamesController.cs" Line="27" Column="38" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="GameLibrary.API" expanded="True">
+            <Node name="GameLibrary.API" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="GamesController.cs" selected="True" />
+              </Node>
+              <Node name="Dtos" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.GameLibrary.API PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
