@@ -2,11 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
-
+import { RouterModule } from '@angular/router';
 // ngx bootstrap imports
 import {BsDropdownModule} from 'ngx-bootstrap';
 
-import { AppRoutingModule } from './app-routing.module';
+
+// routing / main components / servies / guards 
 import { AppComponent } from './app.component';
 import { GameComponent } from './Components/game/game.component';
 import { NavComponent } from './Components/nav/nav.component';
@@ -15,6 +16,12 @@ import { HomeComponent } from './Components/home/home.component';
 import { RegisterComponent } from './Components/register/register.component';
 import {ErrorInterceptorProvider} from './_services/error.interceptor';
 import { AlertifyService } from './_services/alertify.service';
+import { MessagesComponent } from './Components/messages/messages.component';
+import { ListComponent } from './Components/list/list.component';
+import { GameListComponent } from './Components/game-list/game-list.component';
+import {appRoutes} from './routes';
+import { AuthGuard } from './_guards/auth.guard';
+
 
 @NgModule({
   declarations: [
@@ -22,19 +29,23 @@ import { AlertifyService } from './_services/alertify.service';
     GameComponent,
     NavComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
+    MessagesComponent,
+    ListComponent,
+    GameListComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    BsDropdownModule.forRoot()
+    BsDropdownModule.forRoot(),
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [
     AuthService,
     ErrorInterceptorProvider,
-    AlertifyService
+    AlertifyService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })
