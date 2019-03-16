@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace GameLibrary.API.Controllers {
-    //[Authorize]
+    [Authorize]
     [Route ("api/[controller]")]
     [ApiController]
     public class GamesController : ControllerBase {
