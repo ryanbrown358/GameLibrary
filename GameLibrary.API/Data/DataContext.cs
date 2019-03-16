@@ -7,5 +7,6 @@ namespace GameLibrary.API.Data {
 
         public DbSet<Games> Games { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Photo> Photos {get; set;}
     }
 }
