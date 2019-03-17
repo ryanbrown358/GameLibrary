@@ -1,17 +1,18 @@
 ﻿<Properties StartupConfiguration="{76E756C6-0DC2-4C67-8FAC-AD5F7A1DBA45}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/GamesController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Dtos/PhotosForDetailedDto.cs">
     <Files>
-      <File FileName="Controllers/GamesController.cs" Line="27" Column="38" />
+      <File FileName="Controllers/GamesController.cs" Line="31" Column="29" />
+      <File FileName="Dtos/PhotosForDetailedDto.cs" Line="11" Column="41" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="GameLibrary.API" expanded="True">
             <Node name="GameLibrary.API" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="GamesController.cs" selected="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Dtos" expanded="True">
+                <Node name="PhotosForDetailedDto.cs" selected="True" />
               </Node>
-              <Node name="Dtos" expanded="True" />
             </Node>
           </Node>
         </State>

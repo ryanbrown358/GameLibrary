@@ -3,9 +3,10 @@ import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { JwtModule } from '@auth0/angular-jwt';
 // ngx bootstrap imports
-import {BsDropdownModule} from 'ngx-bootstrap';
-
+import {BsDropdownModule, TabsModule} from 'ngx-bootstrap';
+import { NgxGalleryModule } from 'ngx-gallery';
 
 // routing / main components / servies / guards 
 import { AppComponent } from './app.component';
@@ -21,7 +22,17 @@ import { ListComponent } from './Components/list/list.component';
 import { GameListComponent } from './Components/game-list/game-list.component';
 import {appRoutes} from './routes';
 import { AuthGuard } from './_guards/auth.guard';
+import { UserService } from './_services/user.service';
+import { MemberListComponent } from './Components/members/member-list/member-list.component';
+import { MemberCardComponent } from './Components/members/member-card/member-card.component';
+import { MemberDetailComponent } from './Components/members/member-detail/member-detail.component';
+import { MemberDetailResolver } from './_resolvers/member-detail.resolver';
+import { MemberListResolver } from './_resolvers/member-list.resolver';
 
+
+export function tokenGetter() {
+  return localStorage.getItem('token');
+}
 
 @NgModule({
   declarations: [
@@ -32,20 +43,35 @@ import { AuthGuard } from './_guards/auth.guard';
     RegisterComponent,
     MessagesComponent,
     ListComponent,
-    GameListComponent
+    GameListComponent,
+    MemberListComponent,
+    MemberCardComponent,
+    MemberDetailComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
     BsDropdownModule.forRoot(),
-    RouterModule.forRoot(appRoutes)
+    TabsModule.forRoot(),
+    RouterModule.forRoot(appRoutes),
+    NgxGalleryModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter,
+        whitelistedDomains: ['localhost:5000'],
+        blacklistedRoutes: ['localhost:5000/api/auth']
+      }
+    })
   ],
   providers: [
     AuthService,
     ErrorInterceptorProvider,
     AlertifyService,
-    AuthGuard
+    AuthGuard,
+    UserService,
+    MemberDetailResolver,
+    MemberListResolver
   ],
   bootstrap: [AppComponent]
 })

@@ -14,14 +14,12 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
   }
-  registerToggle(){
+  registerToggle() {
     this.registerMode = !this.registerMode;
   }
 
-  cancelRegistrationMode(registerMode: boolean){
+  cancelRegistrationMode(registerMode: boolean) {
     this.registerMode = registerMode;
   }
-
- 
 
 }

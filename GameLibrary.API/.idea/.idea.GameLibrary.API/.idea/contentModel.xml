@@ -3,6 +3,8 @@
   <component name="ContentModelStore">
     <e p="$USER_HOME$/Library/Caches/Rider2018.3/extResources" t="IncludeRecursive" />
     <e p="$USER_HOME$/Library/Caches/Rider2018.3/resharper-host/local/Transient/ReSharperHost/v183/SolutionCaches/_GameLibrary.-1427722376.00" t="ExcludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/consoles/db" t="IncludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p=".gitignore" t="Include" />
       <e p="appsettings.Development.json" t="Include" />
@@ -11,28 +13,43 @@
       <e p="Controllers" t="Include">
         <e p="AuthController.cs" t="Include" />
         <e p="GamesController.cs" t="Include" />
+        <e p="UsersController.cs" t="Include" />
         <e p="ValuesController.cs" t="Include" />
       </e>
       <e p="Data" t="Include">
         <e p="AuthRepository.cs" t="Include" />
         <e p="DataContext.cs" t="Include" />
         <e p="IAuthRepository.cs" t="Include" />
+        <e p="IUserRepository.cs" t="Include" />
+        <e p="Seed.cs" t="Include" />
+        <e p="UserRepository.cs" t="Include" />
+        <e p="UserSeedData.json" t="Include" />
       </e>
       <e p="Dtos" t="Include">
+        <e p="PhotosForDetailedDto.cs" t="Include" />
+        <e p="UserForDetailedDto.cs" t="Include" />
+        <e p="UserForListDto.cs" t="Include" />
         <e p="UserForLoginDto.cs" t="Include" />
         <e p="UserForRegisterDto.cs" t="Include" />
       </e>
       <e p="GameApp.db" t="Include" />
       <e p="GameLibrary.API.csproj" t="IncludeRecursive" />
+      <e p="Helpers" t="Include">
+        <e p="AutoMapperProfiles.cs" t="Include" />
+        <e p="Extensions.cs" t="Include" />
+      </e>
       <e p="Migrations" t="Include">
         <e p="20190309013751_InitialMigration.cs" t="Include" />
         <e p="20190309013751_InitialMigration.Designer.cs" t="Include" />
         <e p="20190309181231_AddedUserEntity.cs" t="Include" />
         <e p="20190309181231_AddedUserEntity.Designer.cs" t="Include" />
+        <e p="20190316013541_ExtendedUserClass.cs" t="Include" />
+        <e p="20190316013541_ExtendedUserClass.Designer.cs" t="Include" />
         <e p="DataContextModelSnapshot.cs" t="Include" />
       </e>
       <e p="Models" t="Include">
         <e p="Game.cs" t="Include" />
+        <e p="Photo.cs" t="Include" />
         <e p="User.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive">
